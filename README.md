@@ -6,7 +6,7 @@ Free to use and modify. For Linux.
 Launch the program 
 create_icc.py
 to create the file myicc.icc in this folder
-using the file data_array. To be used for monitors.
+using the file data_array. To be used with monitors.
 
 Required:
 python3
