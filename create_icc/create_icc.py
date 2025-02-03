@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# V. 0.1
+# V. 0.3
 
 import gi
 gi.require_version('Colord', '1.0')
@@ -8,22 +8,30 @@ from gi.repository import Colord
 from gi.repository import Gio
 import os, sys
 
-_file_name = "myicc.icc"
-
-bb = Colord.Icc.new()
-bb.create_default ()
-
-# colorspace RGB
-bb.set_colorspace(6)
-# display kind
-bb.set_kind(2)
-# file name
-bb.set_filename(_file_name)
-#
-# bb.set_version(2.1)
+if len(sys.argv) > 1:
+    _file_name = sys.argv[1]
+else:
+    _file_name = "myicc.icc"
 
 bb2 = Colord.Icc.new()
 bb2.create_default ()
+
+# colorspace RGB
+bb2.set_colorspace(6)
+# display kind
+bb2.set_kind(2)
+# file name
+bb2.set_filename(_file_name)
+#
+# bb2.set_version(2.1)
+# 
+# description
+bb2.set_description("", _file_name)
+# model
+bb2.set_model("", _file_name)
+#
+# bb2 = Colord.Icc.new()
+# bb2.create_default ()
 
 _arr = []
 try:
