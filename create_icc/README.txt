@@ -1,3 +1,9 @@
+Create an icc profile from data. For monitors.
+
+
+Free to use and modify. For Linux.
+
+
 Launch the program 
 create_icc.py FILE_NAME.icc
 to create the icc file FILE_NAME.icc in this folder
